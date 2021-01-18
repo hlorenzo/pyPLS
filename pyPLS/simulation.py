@@ -13,7 +13,7 @@ def simulateData(n, ncp, p, sigma, signalToNoise=100, ConcVarFact=0.8, n_min_pea
     Y = np.zeros((n, ncp))
 
     for i in np.arange(ncp):
-        npeaks = int(np.ceil((np.random.uniform(1) * 10)) + 3)
+        npeaks = int(np.ceil((np.random.uniform(size=1) * 10)) + 3)
         peakheights = np.random.uniform(size=npeaks)
         sigmas = np.random.uniform(size=npeaks) * sigPeakSigma + meanPeakSigma
         position = np.random.uniform(size=npeaks) * p
